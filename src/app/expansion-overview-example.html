@@ -1,0 +1,48 @@
+<div *ngFor="let Spielstand of Spielstaende">
+  {{Spielstand.name}}:<b>{{Spielstand.result}}</b>
+</div>
+<mat-accordion>
+
+  <div *ngFor="let Spielstand of Spielstaende">
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <b>{{Spielstand.name}}</b>
+      </mat-panel-title>
+      <mat-panel-description>
+        Spieler
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+<div>
+
+    <h1><b>{{Spielstand.result}}</b></h1>
+    <button mat-mini-fab color="warn" (click) = "Spielstand.los()"> zurück</button>
+    .
+    <button mat-mini-fab color="warn" (click) = "Spielstand.Stier1()"> 1 Stier</button>
+    .
+    <button mat-mini-fab color="warn" (click) = "Spielstand.Stier2()"> 2 Stier</button>
+    .
+    <button mat-mini-fab color="warn" (click) = "Spielstand.Stier3()"> 3 Stier</button>
+    .
+    <button mat-mini-fab color="warn" (click) = "Spielstand.Stier5()"> 5 Stier</button>
+    .
+    <button mat-mini-fab color="warn" (click) = "Spielstand.Stier7()"> 7 Stier</button>
+    
+    
+</div>
+    
+    
+  </mat-expansion-panel>
+  </div>
+
+</mat-accordion>
+
+<input [(ngModel)]="name"> <button mat-flat-button (click)="add()">add</button>
+
+
+
+
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
